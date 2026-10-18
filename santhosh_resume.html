@@ -54,7 +54,7 @@
     flex-wrap: wrap;
     gap: 4px 18px;
     margin-top: 8px;
-    font-size: 9px;
+    font-size: 9.5px;
     color: #bdc3c7;
   }
 
@@ -72,11 +72,11 @@
   }
 
   .body {
-    padding: 14px 32px 16px;
+    padding: 16px 32px 18px;
   }
 
   .section {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .section:last-child {
@@ -84,18 +84,18 @@
   }
 
   .section-heading {
-    font-size: 10.5px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: #2c3e50;
     border-bottom: 1.5px solid #2c3e50;
-    padding-bottom: 3px;
-    margin-bottom: 6px;
+    padding-bottom: 4px;
+    margin-bottom: 7px;
   }
 
   .summary-text {
-    font-size: 9px;
+    font-size: 9.5px;
     line-height: 1.45;
     color: #333;
   }
@@ -103,12 +103,12 @@
   .skills-grid {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
   }
 
   .skills-row {
     display: flex;
-    font-size: 9px;
+    font-size: 9.5px;
     line-height: 1.45;
   }
 
@@ -124,7 +124,7 @@
   }
 
   .project {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .project:last-child {
@@ -132,13 +132,13 @@
   }
 
   .project-name {
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 600;
     color: #2c3e50;
   }
 
   .project-stack {
-    font-size: 8.5px;
+    font-size: 9px;
     color: #7f8c8d;
     margin: 1px 0 3px;
     font-weight: 500;
@@ -151,12 +151,12 @@
   }
 
   .project li {
-    font-size: 9px;
-    line-height: 1.4;
+    font-size: 9.5px;
+    line-height: 1.45;
     color: #444;
     padding-left: 12px;
     position: relative;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
 
   .project li::before {
@@ -167,7 +167,7 @@
   }
 
   .project-links {
-    font-size: 8.5px;
+    font-size: 9px;
     margin-top: 2px;
   }
 
@@ -181,26 +181,40 @@
     text-decoration: underline;
   }
 
+  .client-block {
+    background: #f5f8fa;
+    border-left: 3px solid #2c3e50;
+    border-radius: 0 3px 3px 0;
+    padding: 7px 10px 8px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .client-platform {
+    font-weight: 500;
+    color: #7f8c8d;
+  }
+
   .edu-name {
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 600;
     color: #2c3e50;
   }
 
   .edu-detail {
-    font-size: 9px;
+    font-size: 9.5px;
     color: #555;
     margin-top: 1px;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .achievement-item {
-    font-size: 9px;
+    font-size: 9.5px;
     color: #444;
     padding-left: 12px;
     position: relative;
-    margin-bottom: 2px;
-    line-height: 1.4;
+    margin-bottom: 3px;
+    line-height: 1.45;
   }
 
   .achievement-item::before {
@@ -216,7 +230,7 @@
 
   @media print {
     body { background: #fff; padding: 0; }
-    .resume { box-shadow: none; border-radius: 0; height: 297mm; overflow: hidden; zoom: 1 !important; }
+    .resume { box-shadow: none; border-radius: 0; min-height: 0; overflow: visible; zoom: 1 !important; }
   }
 </style>
 </head>
@@ -273,6 +287,25 @@
     </div>
 
     <div class="section">
+      <div class="section-heading">Client Project Experience</div>
+      <div class="project client-block">
+        <div class="project-name">Raahi Global — Client Project <span class="client-platform">| German Language Learning Platform</span></div>
+        <div class="project-stack">Flutter · Dart · Firebase Authentication · Cloud Firestore · Firebase Cloud Messaging · Riverpod · GoRouter</div>
+        <ul>
+          <li>Developed a cross-platform Flutter application for a German language learning and student support platform.</li>
+          <li>Implemented student onboarding, profile completion, course enrollment, and structured A1–B2 learning content.</li>
+          <li>Integrated Firebase Authentication and Cloud Firestore for secure authentication and application data management.</li>
+          <li>Built role-based interfaces and an admin dashboard for managing platform content and student workflows.</li>
+          <li>Integrated Firebase Cloud Messaging for push notifications and GoRouter for in-app navigation.</li>
+          <li>Prepared versioned release builds and supported the testing and Google Play deployment workflow.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/santhosh9863/raahi-german-app" target="_blank">GitHub</a> | <a href="https://play.google.com/store/apps/details?id=com.raahiglobal.raahi_global" target="_blank">Google Play Store</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
       <div class="section-heading">Projects</div>
 
       <div class="project">
@@ -311,21 +344,6 @@
         </ul>
         <div class="project-links">
           <a href="https://github.com/santhosh9863/pro-type" target="_blank">GitHub</a> · <a href="https://typro-delta.vercel.app/" target="_blank">Live Website</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-name">Raahi Global — Language Learning &amp; Student Platform</div>
-        <div class="project-stack">Flutter · Dart · Firebase Authentication · Cloud Firestore · Firebase Cloud Messaging · Riverpod · GoRouter</div>
-        <ul>
-          <li>Developed a cross-platform Flutter app for a German language-learning platform, supporting student onboarding and registration, enrollment enquiries via WhatsApp, and structured A1–B2 course content with vocabulary, dialogues, and text-to-speech practice.</li>
-          <li>Integrated Firebase services — Cloud Firestore, Cloud Messaging push notifications, Analytics, and Crashlytics — with a production registration backend that stores student registrations and sends confirmation emails.</li>
-          <li>Built an auth-guarded admin dashboard as a separate Flutter Web app (Firebase Authentication, Riverpod, GoRouter) with live student registration data, search, filters, and CSV/Excel export; delivered the student experience with structured GoRouter navigation.</li>
-          <li>Added German learning resources and student engagement features: a study-abroad journey roadmap, a Germany toolkit (embassy details, currency converter, essential apps), and class/meeting reminder notifications.</li>
-          <li>Prepared versioned demo and internal test builds, with widget and unit tests covering learning screens, notifications, and admin dashboard flows.</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://github.com/santhosh9863/raahi-german-app" target="_blank">GitHub</a>
         </div>
       </div>
     </div>
